@@ -61,7 +61,7 @@ for msg in consumer:
             zone_name = checkpoint_dict[data['nextZoneId']]
         print(f"Rover {car_name} entered {zone_name} at {time.time()}")
         if data['carId'] in last_seen:
-            print(f"  - This rover was last seen in {last_seen[data['carId']]['last_zone']} trip took round({time.time()-last_seen[data['carId']]['timestamp']}, 2) s")
+            print(f"  - This rover was last seen in {last_seen[data['carId']]['last_zone']} trip took int({time.time()-last_seen[data['carId']]['timestamp']}) s")
         
     else:
         print('Zone update malformed.')
