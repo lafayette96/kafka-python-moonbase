@@ -10,7 +10,7 @@ last_seen = {}
 
 for msg in consumer:
     data = msg.value
-    data['carId'] = "Alpha"
+    #data['carId'] = "Alpha"
 
     if data['previousZoneId']:
         print(f"Rover {data['carId']} left {data['previousZoneId']} at {time.time()}")
