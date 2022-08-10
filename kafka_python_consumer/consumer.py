@@ -11,7 +11,7 @@ last_seen = {}
 
 for msg in consumer:
     data = msg.value
-    names_list=["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike"]
+    names_list=["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett"]
 
     if data['previousZoneId']:
         print(f"Rover {random.choice(names_list)} left {data['previousZoneId']} at {time.time()}")
